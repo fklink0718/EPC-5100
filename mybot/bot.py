@@ -3,8 +3,8 @@ import discord
 import yfinance as yf
 from discord.ext import tasks
 
-TOKEN = os.getenv("MTQwMzc4NTQzMDAwNDEzODAzNA.GN8yCx.bZ_YR8WjnhYzrXt4xHICnMl01FNZ7mXNRTpjF8")
-CHANNEL_ID = int(os.getenv("1403764504218828810"))
+TOKEN = os.getenv("DISCORD_TOKEN")
+CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
@@ -29,5 +29,6 @@ async def send_updates():
     )
 
     await channel.send(msg)
+
 
 client.run(TOKEN)
